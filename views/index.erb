@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>Ruby Store</title>
+
+        <style>
+            table, th, td {
+              border: 1px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <center><h1>Welcome To The Ruby Shop</h1></center>
+        <center>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                </tr>
+                <% @items.each do |item| %>
+                <tr>
+                    <td><%= item["name"] %></td>
+                    <td><%= item["price"] %></td>
+                    <td><%= item["quantity"] %></td>
+                </tr>
+                <% end %>
+            </table>
+        </center>
+    </body>
+</html>
